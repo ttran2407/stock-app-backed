@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Model:
+ - Stock
+    stock symbol
+    last value
+    chart
 
-Things you may want to cover:
+ - User
 
-* Ruby version
+    user_name
+    Name
+    Password
+    Cash
+    Balance
+    Watch List
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - UserStock
+    user_name
+    stock_symbol
