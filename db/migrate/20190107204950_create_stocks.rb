@@ -4,7 +4,6 @@ class CreateStocks < ActiveRecord::Migration[5.2]
       t.string :symbol
       t.string :name
       t.integer :iexId
-
       t.timestamps
     end
   end
