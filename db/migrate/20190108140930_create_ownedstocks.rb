@@ -4,6 +4,7 @@ class CreateOwnedstocks < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.integer :stock_id
       t.integer :quantity
+      t.string :stock_symbol
       t.timestamps
     end
   end

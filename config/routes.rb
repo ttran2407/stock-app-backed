@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     resources :watchlists
     resources :ownedstocks
   end
+  post '/login', to: 'auth#create'
+  get '/current_user', to: 'auth#show'
 
-  resources :stocks
-  resources :statuses
+  resources :stocks, only:[:index, :show]
+  resources :statuses, only:[:index, :show]
 end

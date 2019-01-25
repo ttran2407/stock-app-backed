@@ -5,4 +5,5 @@ class Stock < ApplicationRecord
   has_many :users, through: :transactions
   has_many :users, through: :watchlists
   has_many :users, through: :ownedstocks
+  
 end

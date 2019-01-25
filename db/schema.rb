@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_01_08_173641) do
     t.integer "user_id"
     t.integer "stock_id"
     t.integer "quantity"
+    t.string "stock_symbol"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,23 +38,24 @@ ActiveRecord::Schema.define(version: 2019_01_08_173641) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "user_name"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "password"
-    t.decimal "cash", precision: 2
+  create_table "transactions", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "stock_id"
+    t.integer "status_id"
+    t.integer "quantity"
+    t.float "price"
+    t.string "stock_symbol"
+    t.string "transaction_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "userstocks", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "stock_id"
-    t.string "type"
-    t.integer "quantity"
-    t.float "price"
-    t.string "status"
+  create_table "users", force: :cascade do |t|
+    t.string "user_name"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "password_digest"
+    t.string "cash"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -61,6 +63,7 @@ ActiveRecord::Schema.define(version: 2019_01_08_173641) do
   create_table "watchlists", force: :cascade do |t|
     t.integer "user_id"
     t.integer "stock_id"
+    t.string "stock_symbol"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
