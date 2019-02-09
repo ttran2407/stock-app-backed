@@ -15,8 +15,14 @@ class UsersController < ApplicationController
        token = JWT.encode({user_id: @user.id}, "SECRET")
        render json: {user: @user, jwt: token}
      else
-       render json: {error: `#{@user.valid?}`}, status: 402
+       render json: {error: ""}, status: 402
      end
+   end
+
+   def update
+     @user = User.find(params[:id])
+     @user.update(cash: params[:cash])
+     render json: @user
    end
 
 
