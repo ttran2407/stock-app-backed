@@ -21,7 +21,7 @@ Status.create(status_type: "PENDING")
 Status.create(status_type: "COMPLETED")
 Status.create(status_type: "CANCELED")
 
-User.create(user_name: "tiensteve", first_name:"Tien", last_name:"Tran", password: "123456",password_confirmation: "123456", cash: 10000)
+User.create(user_name: "demo-name", first_name:"Valentino", last_name:"Rossi", password: "123456",password_confirmation: "123456", cash: 100000)
 
 Transaction.create(user_id: 1, stock_id: 7798, status_id: 2, quantity: 10, price:
 340, stock_symbol: "TSLA", transaction_type: "BUY")
